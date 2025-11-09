@@ -1,0 +1,208 @@
+/* ========== Reset ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html, body { height: 100%; }
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #fff;
+
+  /* Background image + built-in dark overlay */
+  background:
+    linear-gradient(0deg, rgba(28,0,46,0.78), rgba(28,0,46,0.78)),
+    url("../assets/images/ai.png") center / cover fixed no-repeat; /* <-- put your file name here */
+}
+
+/* ========== Header (hero) ========== */
+.planner-hero {
+  position: relative;
+  text-align: center;
+  padding: 2.2rem 1rem 1.4rem;
+  border-bottom: 2px solid #f5c542;
+}
+
+.home-btn {
+  position: absolute;
+  top: 3.5rem;
+  right: 3.5rem;
+  padding: 0.4rem 0.9rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  background: #f5c542;
+  color: #1c002e;
+  border-radius: 6px;
+  transition: background 0.25s ease, transform 0.15s ease;
+}
+
+.home-btn:hover {
+  background: #ffd766;
+  transform: translateY(-1px);
+}
+.planner-hero h1 {
+  font-size: 2.6rem;
+  color: #f5c542;
+  line-height: 1.1;
+}
+.planner-hero p {
+  margin-top: .5rem;
+  color: #ffd766;
+}
+
+/* ========== Shared “card” section ========== */
+.planner-input,
+.planner-suggestions,
+.planner-tasks,
+.planner-cta {
+  width: 100%;
+  max-width: 900px;              /* centers & limits width */
+  margin: 1.75rem auto;          /* <-- centers horizontally */
+  padding: 1.75rem;
+  background: rgba(0,0,0,.55);   /* translucent card over bg */
+  border: 1px solid rgba(245,197,66,.35);
+  border-radius: 14px;
+  box-shadow: 0 8px 30px rgba(0,0,0,.35);
+}
+
+/* Section titles */
+.planner-input h2,
+.planner-suggestions h2,
+.planner-tasks h2 {
+  text-align: center;
+  color: #f5c542;
+  font-size: 1.9rem;
+  margin-bottom: 1.25rem;
+  position: relative;
+}
+.planner-input h2::after,
+.planner-suggestions h2::after,
+.planner-tasks h2::after {
+  content: "";
+  display: block;
+  width: 70px;
+  height: 3px;
+  background: #f5c542;
+  margin: .4rem auto 0;
+  border-radius: 2px;
+}
+
+/* ========== Form ========== */
+.planner-input form {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+.planner-input label {
+  font-weight: 700;
+  color: #ffd766;
+  margin-bottom: .25rem;
+}
+.planner-input input,
+.planner-input select {
+  width: 100%;
+  padding: .8rem .9rem;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  font-size: 1rem;
+}
+.planner-input button.submit-btn {
+  padding: .9rem 1.2rem;
+  background: #f5c542;
+  color: #1c002e;
+  font-weight: 800;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform .15s ease, background .25s ease;
+}
+.planner-input button.submit-btn:hover {
+  background: #ffd766;
+  transform: translateY(-1px);
+}
+
+/* 2 columns on tablets/desktop */
+@media (min-width: 768px) {
+  .planner-input form {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .planner-input button.submit-btn {
+    grid-column: span 2; /* make button full row */
+  }
+}
+
+/* ========== Suggestion cards ========== */
+.suggestion-card {
+  background: rgba(0,0,0,.5);
+  border: 1px solid rgba(245,197,66,.25);
+  border-radius: 10px;
+  padding: 1.2rem;
+  margin-bottom: 1rem;
+}
+.suggestion-card h3 {
+  margin: 0 0 .4rem 0;
+  color: #ffd766;
+}
+
+/* ========== Tasks (checklist) ========== */
+.planner-tasks ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.planner-tasks li {
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+  padding: .55rem .7rem;
+  margin-bottom: .6rem;
+  background: rgba(255,215,102,.10);
+  border-left: 4px solid #f5c542;
+  border-radius: 6px;
+}
+.planner-tasks input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+}
+
+/* ========== CTA buttons ========== */
+.planner-cta {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+.planner-cta button {
+  padding: .9rem 1.4rem;
+  font-weight: 800;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform .15s ease, background .25s ease;
+}
+.planner-cta button:first-of-type {
+  background: #f5c542;
+  color: #1c002e;
+}
+.planner-cta button:first-of-type:hover {
+  background: #ffd766;
+  transform: translateY(-1px);
+}
+.planner-cta .export-btn {
+  background: #8e44ad;
+  color: #fff;
+}
+.planner-cta .export-btn:hover {
+  background: #732d91;
+  transform: translateY(-1px);
+}
+
+/* ========== Small screens tweaks ========== */
+@media (max-width: 480px) {
+  .planner-hero h1 { font-size: 2.1rem; }
+  .planner-input,
+  .planner-suggestions,
+  .planner-tasks,
+  .planner-cta { padding: 1.25rem; }
+}

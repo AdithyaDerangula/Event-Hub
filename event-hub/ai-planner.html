@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/ai-planner.css">
+  <title>AI Planner - EventHub</title>
+</head>
+
+<body>
+  <header class="planner-hero">
+    <h1>AI Event Planner</h1>
+    <p>Plan smarter, not harder. Let AI help you create the perfect event.</p>
+    <a href="index.html" class="home-btn">Home</a>
+  </header>
+
+  <!-- Input Form -->
+  <section class="planner-input">
+    <h2>Enter Event Details</h2>
+    <form>
+      <div class="form-group">
+        <label>Event Name</label>
+        <input type="text" placeholder="e.g., Birthday Party">
+      </div>
+
+      <div class="form-group">
+        <label>Date</label>
+        <input type="date">
+      </div>
+
+      <div class="form-group">
+        <label>Event Type</label>
+        <select>
+          <option>Wedding</option>
+          <option>Birthday</option>
+          <option>Corporate</option>
+          <option>Festival</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Budget (₹)</label>
+        <input type="text" placeholder="e.g., 50000">
+      </div>
+
+      <button type="submit" class="submit-btn">Generate Plan</button>
+    </form>
+  </section>
+
+  <!-- AI Suggestions -->
+  <section class="planner-suggestions">
+    <h2>AI Suggestions</h2>
+    <div class="suggestion-card">
+      <h3>Venue Recommendation</h3>
+      <p>Suggested Venues will appear here...</p>
+    </div>
+    <div class="suggestion-card">
+      <h3>Food & Catering</h3>
+      <p>AI-based catering options...</p>
+    </div>
+    <div class="suggestion-card">
+      <h3>Entertainment</h3>
+      <p>Music, games, shows...</p>
+    </div>
+  </section>
+
+  <!-- Checklist -->
+  <section class="planner-tasks">
+    <h2>Planner Checklist</h2>
+    <ul>
+      <li><input type="checkbox"> Book Venue</li>
+      <li><input type="checkbox"> Send Invitations</li>
+      <li><input type="checkbox"> Arrange Catering</li>
+      <li><input type="checkbox"> Book Entertainment</li>
+      <li><input type="checkbox"> Finalize Decorations</li>
+    </ul>
+  </section>
+
+  <!-- Call To Action -->
+  <section class="planner-cta">
+    <button>Save Plan</button>
+    <button class="export-btn">Export as PDF</button>
+  </section>
+</body>
+
+</html>

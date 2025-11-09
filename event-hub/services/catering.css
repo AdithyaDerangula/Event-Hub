@@ -1,0 +1,201 @@
+/* ================================
+   Catering Page Styles
+   ================================ */
+
+/* Reset & Base */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #10001a;
+  color: #fff;
+  line-height: 1.6;
+}
+
+/* Header (reuse global style, just ensuring consistency here) */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #1c002e;
+  padding: 1rem 5%;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+header .logo {
+  display: flex;
+  align-items: center;
+}
+
+header .logo img {
+  height: 40px;
+  margin-right: 10px;
+}
+
+header nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+header nav ul li {
+  margin-left: 1.2rem;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+  color: #f5c542;
+}
+
+/* Service Hero */
+.service-hero {
+  background: linear-gradient(rgba(28, 0, 46, 0.7), rgba(28, 0, 46, 0.7)), 
+              url('../assets/images/services-bg.jpg') center/cover no-repeat;
+  color: #fff;
+  text-align: center;
+  padding: 4rem 1rem;
+}
+
+.service-hero h2 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: #f5c542;
+}
+
+.service-hero p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+/* Vendor Listings */
+.vendor-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  padding: 3rem 5%;
+}
+
+.vendor-card {
+  background: #1c002e;
+  color: #fff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.vendor-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.5);
+}
+
+.vendor-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.vendor-card h3 {
+  color: #f5c542;
+  margin-bottom: 0.5rem;
+}
+
+.vendor-card p {
+  font-size: 0.95rem;
+  opacity: 0.9;
+}
+
+.vendor-card ul {
+  margin: 0.5rem 0 0;
+  padding-left: 1.2rem;
+}
+
+.vendor-card ul li {
+  font-size: 0.9rem;
+  margin-bottom: 0.3rem;
+}
+
+/* Book Now Button */
+.book-btn {
+  background: #f5c542;
+  color: #1c002e;
+  font-weight: bold;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.book-btn:hover {
+  background: #ffd766;
+  transform: scale(1.05);
+}
+
+/* Footer */
+.footer {
+  background: #1c002e;
+  color: #fff;
+  padding: 2rem 5% 1rem;
+  margin-top: 3rem;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+}
+
+.footer h3 {
+  color: #f5c542;
+  margin-bottom: 1rem;
+}
+
+.footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer ul li {
+  margin-bottom: 0.5rem;
+}
+
+.footer ul li a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer ul li a:hover {
+  color: #f5c542;
+}
+
+.social-icons a {
+  color: #fff;
+  margin-right: 0.8rem;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #f5c542;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 0.85rem;
+  opacity: 0.7;
+}
